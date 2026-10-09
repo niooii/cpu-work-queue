@@ -1,7 +1,9 @@
 [package]
 name = "cpu-work-queue"
+description = "A simple CPU work queue with caching and deduplication support."
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
 
 [dependencies]
 futures = "0.3.34"

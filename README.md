@@ -4,6 +4,10 @@ A simple CPU work queue meant for heavy, long-running and deterministic compute 
 
 This crate supports fetching cached results and request deduplication.
 
+## Invariants
+- If an input has the same key as a currently running task's input, the duplicate task isn't ran and will consume the result of the original one.
+- If an input has a key that yields a cached output, no work is done.
+
 ## Usage
 ```sh
 cargo add cpu-work-queue
